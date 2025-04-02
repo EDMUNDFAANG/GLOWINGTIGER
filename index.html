@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyberpunk Glow</title>
+  <title>Hologram Effect</title>
   <style>
     body {
       background-color: #000;
@@ -14,34 +14,36 @@
       height: 100vh;
     }
 
-    .holo {
+    .hologram {
       width: 60%;
       height: auto;
-      animation: neonPulse 2s infinite alternate;
-      filter: drop-shadow(0 0 5px #00f7ff)
-              drop-shadow(0 0 10px #00f7ff)
-              drop-shadow(0 0 20px #00f7ff)
-              drop-shadow(0 0 40px #00f7ff);
-      transition: filter 0.3s ease-in-out;
+      filter: drop-shadow(0 0 2px rgba(0, 255, 255, 0.5))
+              drop-shadow(0 0 4px rgba(0, 255, 255, 0.3));
+      animation: pulse 3s infinite ease-in-out;
+      mix-blend-mode: screen; /* blends better with dark bg */
+      opacity: 0.85;
     }
 
-    @keyframes neonPulse {
+    @keyframes pulse {
       0% {
-        filter: drop-shadow(0 0 2px #00f7ff)
-                drop-shadow(0 0 4px #00f7ff)
-                drop-shadow(0 0 8px #00f7ff)
-                drop-shadow(0 0 16px #00f7ff);
+        filter: drop-shadow(0 0 2px rgba(0, 255, 255, 0.3))
+                drop-shadow(0 0 4px rgba(0, 255, 255, 0.2));
+        opacity: 0.8;
+      }
+      50% {
+        filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.6))
+                drop-shadow(0 0 12px rgba(0, 255, 255, 0.3));
+        opacity: 1;
       }
       100% {
-        filter: drop-shadow(0 0 8px #00f7ff)
-                drop-shadow(0 0 16px #00f7ff)
-                drop-shadow(0 0 32px #00f7ff)
-                drop-shadow(0 0 64px #00f7ff);
+        filter: drop-shadow(0 0 2px rgba(0, 255, 255, 0.3))
+                drop-shadow(0 0 4px rgba(0, 255, 255, 0.2));
+        opacity: 0.8;
       }
     }
   </style>
 </head>
 <body>
-  <img src="Cb0oZe01.svg" alt="Cyberpunk Glowing Face" class="holo" />
+  <img src="Cb0oZe01.svg" alt="Cyberpunk Hologram" class="hologram" />
 </body>
 </html>

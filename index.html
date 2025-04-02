@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon SVG Glow</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Neon Glow SVG</title>
+  <style>
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .neon {
+      filter: drop-shadow(0 0 5px #0ff)
+              drop-shadow(0 0 10px #0ff)
+              drop-shadow(0 0 20px #0ff)
+              drop-shadow(0 0 40px #0ff);
+      width: 60%; /* scale to fit */
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-  <div class="svg-wrapper">
-    <!-- Inline SVG for more control -->
-    <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#0ff" />
-          <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#0ff" />
-          <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#0ff" />
-        </filter>
-      </defs>
-
-      <!-- Replace this with your own path/image/etc -->
-      <circle cx="200" cy="200" r="100" fill="none" stroke="#0ff" stroke-width="4" filter="url(#neon-glow)">
-        <!-- Optional animation -->
-        <animate attributeName="r" values="100;105;100" dur="2s" repeatCount="indefinite" />
-      </circle>
-    </svg>
-  </div>
+  <img src="Cb0oZe01.svg" alt="Glowing Neon Image" class="neon" />
 </body>
 </html>

@@ -3,28 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neon Glow SVG</title>
+  <title>Cyberpunk Glow</title>
   <style>
     body {
-      background: #000;
+      background-color: #000;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
     }
 
-    .neon {
-      filter: drop-shadow(0 0 5px #0ff)
-              drop-shadow(0 0 10px #0ff)
-              drop-shadow(0 0 20px #0ff)
-              drop-shadow(0 0 40px #0ff);
-      width: 60%; /* scale to fit */
+    .holo {
+      width: 60%;
       height: auto;
+      animation: neonPulse 2s infinite alternate;
+      filter: drop-shadow(0 0 5px #00f7ff)
+              drop-shadow(0 0 10px #00f7ff)
+              drop-shadow(0 0 20px #00f7ff)
+              drop-shadow(0 0 40px #00f7ff);
+      transition: filter 0.3s ease-in-out;
+    }
+
+    @keyframes neonPulse {
+      0% {
+        filter: drop-shadow(0 0 2px #00f7ff)
+                drop-shadow(0 0 4px #00f7ff)
+                drop-shadow(0 0 8px #00f7ff)
+                drop-shadow(0 0 16px #00f7ff);
+      }
+      100% {
+        filter: drop-shadow(0 0 8px #00f7ff)
+                drop-shadow(0 0 16px #00f7ff)
+                drop-shadow(0 0 32px #00f7ff)
+                drop-shadow(0 0 64px #00f7ff);
+      }
     }
   </style>
 </head>
 <body>
-  <img src="Cb0oZe01.svg" alt="Glowing Neon Image" class="neon" />
+  <img src="Cb0oZe01.svg" alt="Cyberpunk Glowing Face" class="holo" />
 </body>
 </html>

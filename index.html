@@ -14,12 +14,35 @@
       height: 100vh;
     }
 
-    .hologram {
+    .holo-container {
+      position: relative;
       width: 60%;
+    }
+
+    .hologram {
+      width: 100%;
       height: auto;
       animation: pulse 3s infinite ease-in-out;
       mix-blend-mode: screen;
       opacity: 0.85;
+      display: block;
+    }
+
+    .scanline {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0,255,255,0.1) 50%, transparent 100%);
+      animation: scan 4s infinite;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes scan {
+      0% { top: -100%; }
+      100% { top: 100%; }
     }
 
     @keyframes pulse {
@@ -42,6 +65,9 @@
   </style>
 </head>
 <body>
-  <img src="Cb0oZe01.svg" alt="Cyberpunk Hologram" class="hologram" />
+  <div class="holo-container">
+    <img src="Cb0oZe01.svg" alt="Cyberpunk Hologram" class="hologram" />
+    <div class="scanline"></div>
+  </div>
 </body>
 </html>

@@ -22,10 +22,13 @@
     .hologram {
       width: 100%;
       height: auto;
-      animation: pulse 3s infinite ease-in-out;
+      display: block;
       mix-blend-mode: screen;
       opacity: 0.85;
-      display: block;
+      transform-origin: center center;
+      animation:
+        pulse 3s infinite ease-in-out,
+        headGlitch 6s steps(1, end) infinite;
     }
 
     .scanline {
@@ -61,6 +64,20 @@
                 drop-shadow(0 0 4px rgba(0, 255, 255, 0.2));
         opacity: 0.8;
       }
+    }
+
+    @keyframes headGlitch {
+      0%   { transform: translate(0, 0); }
+      10%  { transform: translateY(-6px); }
+      20%  { transform: translateY(0); }
+      30%  { transform: translateX(-6px); }
+      40%  { transform: translateX(0); }
+      50%  { transform: translateY(4px); }
+      60%  { transform: translateY(0); }
+      70%  { transform: translateX(5px); }
+      80%  { transform: translateX(0); }
+      90%  { transform: translateY(-3px); }
+      100% { transform: translate(0, 0); }
     }
   </style>
 </head>

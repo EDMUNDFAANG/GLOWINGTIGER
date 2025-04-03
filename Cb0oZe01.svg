@@ -2,22 +2,20 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="207pt" height="156pt" viewBox="0 0 207 156" preserveAspectRatio="xMidYMid meet">
+ width="207.000000pt" height="156.000000pt" viewBox="0 0 207.000000 156.000000"
+ preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.10, written by Peter Selinger 2001-2011
 </metadata>
-
-<!-- 💡 Neon Glow Filter -->
-<defs>
+ <defs>
   <filter id="holo-glow" x="-50%" y="-50%" width="200%" height="200%">
     <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#00f7ff" flood-opacity="0.6"/>
     <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00f7ff" flood-opacity="0.4"/>
     <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00f7ff" flood-opacity="0.2"/>
   </filter>
 </defs>
-<!-- 💠 Drawing -->
-<g transform="translate(0,156) scale(0.1,-0.1)"
-   fill="none" stroke="#00f7ff" stroke-width="8" filter="url(#holo-glow)">
+<g transform="translate(0.000000,156.000000) scale(0.100000,-0.100000)"
+fill="none" stroke="#00f7ff" stroke-width="8" filter="url(#holo-glow)">\
 <path d="M1073 1553 c-13 -2 -23 -9 -23 -14 0 -5 -9 -9 -19 -9 -11 0 -22 -6
 -24 -12 -4 -10 -8 -9 -16 2 -6 9 -11 10 -11 3 0 -7 -25 -13 -62 -16 -83 -7
 -156 -21 -169 -34 -17 -17 4 -23 47 -12 21 6 54 12 71 14 18 2 46 6 63 10 19
